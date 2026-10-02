@@ -9,6 +9,10 @@ import userRouter from "./routes/user.route.js"
 import interviewRouter from "./routes/interview.route.js"
 import paymentRouter from "./routes/payment.route.js"
 
+import dns from 'dns';
+// Change DNS
+dns.setServers(["1.1.1.1", "8.8.8.8"]);
+
 const app = express()
 app.use(cors({
     origin:"http://localhost:5173",
